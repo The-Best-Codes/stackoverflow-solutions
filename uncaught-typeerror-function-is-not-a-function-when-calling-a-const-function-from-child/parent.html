@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Parent Window</title>
+    <script>
+      // Define the function in the parent
+      function myFunction() {
+        alert("Hi there!");
+        console.log("From parent...");
+      }
+
+      // Listen for messages from the popup
+      window.addEventListener("message", (event) => {
+        // Ensure you receive the message only from the expected origin
+        /* if (event.origin !== "http://example.com")
+          return; */
+
+        // Check the message data and call the function
+        if (event.data === "callParentFunction") {
+          myFunction();
+        }
+      });
+
+      function openPopup() {
+        window.open("popup.html", "popupWindow", "width=400,height=400");
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="openPopup()">Open Popup</button>
+  </body>
+</html>

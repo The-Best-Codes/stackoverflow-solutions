@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Popup Window</title>
+    <script>
+      function callParentFunction() {
+        // Send a message to the parent
+        window.opener.postMessage("callParentFunction", "*");
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="callParentFunction()">Call Parent Function</button>
+  </body>
+</html>
