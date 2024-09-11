@@ -44,3 +44,7 @@ isgdtxt.write(hex_string)
 # Close the output file
 isgdtxt.close()
 ```
+
+## References:
+
+**binascii:** https://docs.python.org/3/library/binascii.html
