@@ -1,4 +1,4 @@
-## Solution
+## Solution:
 
 The issue is how you linked to the script in your HTML. You should use the `<script>` tag, not `<link>`, like this:
 
